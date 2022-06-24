@@ -1,9 +1,9 @@
 import React from 'react'
 
-const timetable = () => {
+const Timetable = () => {
   return (
     <div>Timetable</div>
   )
 }
 
-export default timetable
+export default Timetable

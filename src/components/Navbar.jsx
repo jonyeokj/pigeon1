@@ -5,7 +5,6 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Profile } from '.';
 import { useStateContext } from '../contexts/ContextProvider';
-import { TooltipLocation } from '@syncfusion/ej2/svg-base';
 import avatar from '../data/avatar.jpg';
 
 const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
@@ -17,26 +16,43 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
       className="relative text-xl rounded-full p-3 hover:bg-light-gray"
     >
       <span
-      style={{ background: dotColor }}
-      className="absolute inline-flex rounded-full h-2 w-2 right-2 top-2"
-    >
+        style={{ background: dotColor }}
+        className="absolute inline-flex rounded-full h-2 w-2 right-2 top-2"
+      />
       {icon}
-      </span>
     </button>
   </TooltipComponent>
 );
 
 const Navbar = () => {
-  const { activeMenu, setActiveMenu, handleClick, isClicked } = useStateContext();
-  
+  const { activeMenu, setActiveMenu, handleClick, isClicked, setScreenSize, screenSize } = useStateContext();
+
+  useEffect(() => {
+    const handleResize = () => setScreenSize(window.innerWidth);
+
+    window.addEventListener('resize', handleResize);
+
+    handleResize();
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (screenSize <= 900) {
+      setActiveMenu(false);
+    } else {
+      setActiveMenu(true);
+    }
+  }, [screenSize]);
+
+  const handleActiveMenu = () => setActiveMenu(!activeMenu);
+
   return (
     <div className="flex justify-between p-2 md:ml-6 md:mr-6 relative">
-       <div>
-        <NavButton title="Menu" 
-        customFunc={setActiveMenu((prevActiveMenu) => !prevActiveMenu)} 
-        color='blue' 
-        icon={<AiOutlineMenu />} />
-        <TooltipComponent content="Profile" position="Center">
+
+      <NavButton title="Menu" customFunc={handleActiveMenu} color='blue' icon={<AiOutlineMenu />} />
+      <div className="flex">
+        <TooltipComponent content="Profile" position="BottomCenter">
           <div
             className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
             onClick={() => handleClick('Profile')}
@@ -44,6 +60,7 @@ const Navbar = () => {
             <img
               className="rounded-full w-8 h-8"
               src={avatar}
+              alt="user-profile"
             />
             <p>
               <span className="text-gray-400 text-14">Hi,</span>{' '}
@@ -54,10 +71,11 @@ const Navbar = () => {
             <MdKeyboardArrowDown className="text-gray-400 text-14" />
           </div>
         </TooltipComponent>
+
         {isClicked.Profile && (<Profile />)}
-       </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default Navbar

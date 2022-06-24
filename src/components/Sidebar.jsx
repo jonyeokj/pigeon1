@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { SiShopware } from 'react-icons/si';
+import { FaEarlybirds } from 'react-icons/fa';
 import { MdOutlineCancel } from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
@@ -25,14 +25,14 @@ const Sidebar = () => {
         <>
           <div className="flex justify-between items-center">
             <Link to="/" onClick={handleCloseSideBar} className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900">
-              <SiShopware /> <span>Pigeon</span>
+              <FaEarlybirds /> <span>Pigeon</span>
             </Link>
             <TooltipComponent content="Menu" position="BottomCenter">
               <button
                 type="button"
-                onClick={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
+                onClick={() => setActiveMenu(!activeMenu)}
                 style={{ color: currentColor }}
-                className="text-xl rounded-full p-3 hover:bg-light-gray mt-4 block md:hidden"
+                className="text-xl rounded-full p-3 hover:bg-light-gray mt-4 block"
               >
                 <MdOutlineCancel />
               </button>
