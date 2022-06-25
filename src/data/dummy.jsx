@@ -1,7 +1,8 @@
 import React from 'react';
-import { MdOutlineSpaceDashboard } from 'react-icons/md';
+import { MdOutlineSpaceDashboard, MdNotificationsActive } from 'react-icons/md';
 import { BsFillChatLeftFill, BsTable} from 'react-icons/bs';
-import { GrSchedule} from 'react-icons/gr';
+import { GrSchedule, GrTask } from 'react-icons/gr';
+import { FiAlertCircle } from 'react-icons/fi';
 
 export const links = [
     {
@@ -37,3 +38,24 @@ export const links = [
       ],
     },
   ];
+
+export const DashB = [
+  {
+    icon: <MdNotificationsActive />,
+    title: 'Announcements',
+    iconColor: '#03C9D7',
+    iconBg: '#E5FAFB',
+  },
+  {
+    icon: <GrTask />,
+    title: 'Tasks',
+    iconColor: 'rgb(255, 244, 229)',
+    iconBg: 'rgb(254, 201, 15)',
+  },
+  {
+    icon: <FiAlertCircle />,
+    title: 'Important',
+    iconColor: 'rgb(255, 244, 229)',
+    iconBg: 'rgb(254, 201, 15)',
+  }
+];
