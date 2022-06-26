@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
-import { Navbar, CooCoo, Sidebar, Profile } from './components';
-import { Home, Dashboard, Timetable, Calender } from './pages';
+import { Navbar, Dashboard, CooCoo, Sidebar, Profile } from './components';
+import { Home, Timetable, Calender } from './pages';
 import './App.css';
 
 import { useStateContext } from './contexts/ContextProvider';

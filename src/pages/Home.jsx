@@ -23,8 +23,8 @@ const Home = () => {
         <div className="columns-2xl overflow-auto">
           <Dashboard />
         </div>
-        <div className="flex items-start">
-        <CooCoo /> 
+        <div className='flex justify item-center'>
+          <CooCoo /> 
         </div>      
       </div>  
     </div>
