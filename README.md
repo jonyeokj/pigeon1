@@ -20,37 +20,28 @@ Therefore, we intend on creating an app that facilitates peer-to-peer interactio
 
 ## Features
 
-### CooCoo (chat)
-Initially, chats including everybody in the module will be created. This serves as a platform for students to get to know other students in their course and make new friends in order to help them along the way. This chat room is also used 24/7 to discuss all matters regarding lectures, tutorials, and assignments. This allows for stronger students to share their wisdom.
-
-During lectures and tutorials, students will have access to a dedicated chatroom with the professor/teaching assistant. This will be used by the professor or teaching assistant to facilitate classes. This provides a direct pipeline for the teaching staff and students to communicate, allowing students to clarify doubts and pose interesting questions.
-
-Individuals will have the liberty to create groups of their own, and invite their newfound friends to form smaller and more focused study groups.
-
-Optional anonymous function for the chat. This allows students to break out of their comfort zones and ask questions they would normally be too afraid to ask. 
-
-Includes a filter to censor profanities and inappropriate content. Mandatory for any chat platform to promote a safe and supportive environment.
-
 ### DashBoard
-Display timetable for all lectures, tutorials, recitals, and labs. This provides students with a forecast of upcoming events to help them organise their time and prioritize their tasks
+Learning Dashboard provides students with important information at a glance. It also allows students to easily access the other features (CooCoo, Teaching, Announcements, Timetable and Checklist).
 
-Option to set the current day and next day’s timetable as wallpaper. Many students do this already, this is an improvement to their quality of life.
+Dashboard will be displayed upon successfully logging in or when clicking on the home page icon at the top of the side menu bar.
 
-A dashboard containing a task checklist and announcement section that professors can manually update. 
-The checklist sets reminders (similar to Calendar and Reminders apps on IOS) so students know exactly what they have to complete and by when. Tasks can also be toggled completed or not.
+Dashboard will contain a summarized window to show the important information for each of the features. This allows students to see the important information at a glance and allows them to easily navigate to each of the individual features.
 
-The announcements section allows professors to disseminate information to the students.
+### CooCoo (chat)
+Coocoo will be split according to the modules the student is taking. As we have received some feedback regarding our native chat from the peer evaluation, we have decided to improve the implementation. For each module there will be a link to the Telegram group created by the professor. 
 
-Detect new tasks uploaded onto LumiNUS, such as quizzes and assignment submissions, and automatically reflect them on the dashboard. Reduces the workload of professors and makes the accuracy of tasks on the dashboard less prone to human error.
+In the summarized window in the Dashboard, CooCoo will show the pinned messages of the Telegram group for the current lesson.
 
-Instead of toggling, the app automatically detects when a task has been submitted on LumiNUS and reflects it as completed on the dashboard. Simple quality of life improvement to help students organize their tasks.
+As Telegram is a stable and widely established platform already in use by the majority of students and faculty members, we have decided to make use of the familiar platform Telegram to implement our chat function. This avoids the fuss for students to navigate a new UI.
+
 
 ### Teaching Tools
-Teachers will be allowed to reference these tools in the chat function that students can click on. This encourages students to actively participate in the activities set by the teachers, thus reflecting the progress of their learning.
+Teaching Tools will be split according to the modules the student is taking. As we have received some feedback regarding our teaching tools from the peer evaluation, we have decided to improve the implementation. For each module there will be a link to the teaching tools created by the professor such as Kahoot rooms. 
 
-Tools can be game or forum centric and will draw inspiration from websites and applications such as Kahoot and PollEV. These score-based systems give students a sense of achievement and are proven to be well received by students.
+In the summarized window in the Dashboard, Teaching Tools will show the links (if any) to the teaching tools being used by the current lecturer.
 
-A whiteboard feature for the facilitator to choose who has permission to write on it. Allows for easy visualization of concepts during class.
+As there are already many teaching tools in place such as Kahoot and PollEV and many professors have already been accustomed to using them for their classes, we have decided to preserve these tools and instead provide links for students to easily access these tools during class time.
+
 
 ## Navigation
 
@@ -59,9 +50,6 @@ This is the home page and students will be directed to this page upon successful
 
 ### Dashboard
 This is the Dashboard page and students will be directed to this page upon clicking on the Dashboard button in the side menu. The Dahsboard displays important announcements sent by professors, the upcoming submissions and tasks, and a customizable 'Important' section which will be displayed in the summarized version of the Dashboard on the Home page. Students can choose what tasks/announcements to add to this 'Important' section.
-
-### Calender
-This is the calender page and students will be directed to this page upon clicking on the Calender button in the side menu bar. This displays the calender adn studetns are able to quickly determine how far away deadlines are. Students are also able to add their own events to the Calender,
 
 ### Timetable
 This is the timetable page and students will be directed to this page upon clicking on the Timetable button in the sdie menu bar. Students will submit a link to their NusMods timetable which will be imported here and displayed. (Currently unavailable).
