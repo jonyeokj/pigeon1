@@ -4,7 +4,7 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Navbar, Dashboard, CooCoo, Sidebar, Profile } from './components';
-import { Home, Timetable, Calender } from './pages';
+import { Home, Timetable, Calender, Checklist } from './pages';
 import './App.css';
 
 import { useStateContext } from './contexts/ContextProvider';
@@ -61,6 +61,7 @@ const App = () => {
                 <Route path="/timetable" element={<Timetable />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/calender" element={<Calender />} />
+                <Route path="/checklist" element={<Checklist />} />
               </Routes>
             </div> 
           </div>

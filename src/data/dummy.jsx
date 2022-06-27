@@ -35,6 +35,10 @@ export const links = [
           name: 'Timetable',
           icon: <BsTable />,
         },
+        {
+          name: 'Checklist',
+          icon: <BsTable />,
+        },
       ],
     },
   ];
@@ -51,6 +55,7 @@ export const DashB = [
     title: 'Tasks',
     iconColor: 'rgb(255, 244, 229)',
     iconBg: 'rgb(254, 201, 15)',
+    onclick: ()=> console.log('test')
   },
   {
     icon: <FiAlertCircle />,

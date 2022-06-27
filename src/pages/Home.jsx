@@ -13,7 +13,7 @@ const Home = () => {
         bg-gradient-to-r from-purple-500 to-pink-500 to-fuchsia-500 bg-no-repeat bg-cover bg-center">
           <div className="flex justify-between items-center">
             <div>
-              <p className="font-bold text-3xl text-white">Welcome Back, Michael!</p>
+              <p className="font-bold text-3xl text-white">Welcome Back, User!</p>
               <p className="text-white">20 May 2022</p>
             </div>
           </div>
