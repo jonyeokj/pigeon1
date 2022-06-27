@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pigeon1/static/css/main.89c2de60.css",
+    "main.js": "/pigeon1/static/js/main.a4218780.js",
+    "index.html": "/pigeon1/index.html",
+    "main.89c2de60.css.map": "/pigeon1/static/css/main.89c2de60.css.map",
+    "main.a4218780.js.map": "/pigeon1/static/js/main.a4218780.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.89c2de60.css",
+    "static/js/main.a4218780.js"
+  ]
+}
