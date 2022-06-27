@@ -30,7 +30,7 @@ const Checklist = () => {
   }
 
   return (
-    <div className="App">
+    <div className="Checklist">
       <Header />
       <ToDoList toDoList={toDoList} handleToggle={handleToggle} handleFilter={handleFilter}/>
       <ToDoForm addTask={addTask}/>

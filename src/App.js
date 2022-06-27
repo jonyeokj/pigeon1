@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
-import { Navbar, Dashboard, CooCoo, Sidebar, Profile } from './components';
-import { Home, Timetable, Calender, Checklist } from './pages';
+import { Navbar, Dashboard, CooCoo, Teaching, Sidebar, Profile } from './components';
+import { Home, Timetable, Calender, Checklist, Announcements } from './pages';
 import './App.css';
 
 import { useStateContext } from './contexts/ContextProvider';
@@ -52,12 +52,14 @@ const App = () => {
             <div>
               <Routes>
                 {/* Main page */}
-                <Route path="/" element={<Home />} />
-                <Route path="/home" element={<Home />} />
+                <Route path="/" element={<Dashboard />} />
+                <Route path="/home" element={<Dashboard />} />
 
                 {/* Chat & others */}
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/coocoo" element={<CooCoo />} />
+                <Route path="/teaching" element={<Teaching />} />
+                <Route path="/announcements" element={<Announcements />} />
                 <Route path="/timetable" element={<Timetable />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/calender" element={<Calender />} />

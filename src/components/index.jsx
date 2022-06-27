@@ -1,4 +1,5 @@
 export { default as CooCoo } from './CooCoo';
+export { default as Teaching } from './Teaching';
 export { default as Dashboard } from './Dashboard';
 export { default as Sidebar } from './Sidebar';
 // eslint-disable-next-line import/no-cycle

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useStateContext } from '../contexts/ContextProvider';
 
-const Timetable = () => {
+const Announcements = () => {
 
   const { currentColor, activeMenu, setActiveMenu, screenSize } = useStateContext();
 
@@ -14,7 +14,7 @@ const Timetable = () => {
         bg-gradient-to-r from-purple-500 to-pink-500 to-fuchsia-500 bg-no-repeat bg-cover bg-center">
           <div className="flex justify-between items-center">
             <div>
-              <p className="font-bold text-3xl text-white">Timetable</p>
+              <p className="font-bold text-3xl text-white">Announcements</p>
             </div>
           </div>
         </div>
@@ -23,4 +23,4 @@ const Timetable = () => {
   )
 }
 
-export default Timetable
+export default Announcements

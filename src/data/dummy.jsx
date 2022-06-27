@@ -1,12 +1,11 @@
 import React from 'react';
-import { MdOutlineSpaceDashboard, MdNotificationsActive } from 'react-icons/md';
-import { BsFillChatLeftFill, BsTable} from 'react-icons/bs';
-import { GrSchedule, GrTask } from 'react-icons/gr';
-import { FiAlertCircle } from 'react-icons/fi';
+import { MdOutlineSpaceDashboard } from 'react-icons/md';
+import { FaChalkboardTeacher } from 'react-icons/fa'
+import { BsCalendarEvent, BsMegaphone, BsFillChatLeftFill, BsCheck2} from 'react-icons/bs';
 
 export const links = [
     {
-      title: 'Pigeon',
+      title: 'Home',
       links: [
         {
           name: 'Dashboard',
@@ -16,11 +15,15 @@ export const links = [
     },
   
     {
-      title: 'Functions',
+      title: 'Links',
       links: [
         {
           name: 'CooCoo',
           icon: <BsFillChatLeftFill />,
+        },
+        {
+          name: 'Teaching',
+          icon: <FaChalkboardTeacher />,
         },
       ],
     },
@@ -28,16 +31,16 @@ export const links = [
       title: 'Apps',
       links: [
         {
-          name: 'Calendar',
-          icon: <GrSchedule />,
+          name: 'Announcements',
+          icon: <BsMegaphone />,
         },
         {
           name: 'Timetable',
-          icon: <BsTable />,
+          icon: <BsCalendarEvent />,
         },
         {
           name: 'Checklist',
-          icon: <BsTable />,
+          icon: <BsCheck2 />,
         },
       ],
     },
@@ -45,21 +48,32 @@ export const links = [
 
 export const DashB = [
   {
-    icon: <MdNotificationsActive />,
-    title: 'Announcements',
+    icon: <BsFillChatLeftFill />,
+    title: 'Coocoo',
     iconColor: '#03C9D7',
     iconBg: '#E5FAFB',
   },
   {
-    icon: <GrTask />,
-    title: 'Tasks',
-    iconColor: 'rgb(255, 244, 229)',
-    iconBg: 'rgb(254, 201, 15)',
-    onclick: ()=> console.log('test')
+    icon: <FaChalkboardTeacher />,
+    title: 'Teaching',
+    iconColor: '#03C9D7',
+    iconBg: '#E5FAFB',
   },
   {
-    icon: <FiAlertCircle />,
-    title: 'Important',
+    icon: <BsMegaphone />,
+    title: 'Announcements',
+    iconColor: 'rgb(255, 244, 229)',
+    iconBg: 'rgb(254, 201, 15)',
+  },
+  {
+    icon: <BsCalendarEvent />,
+    title: 'Timetable',
+    iconColor: 'rgb(255, 244, 229)',
+    iconBg: 'rgb(254, 201, 15)',
+  },
+  {
+    icon: <BsCheck2 />,
+    title: 'Checklist',
     iconColor: 'rgb(255, 244, 229)',
     iconBg: 'rgb(254, 201, 15)',
   }

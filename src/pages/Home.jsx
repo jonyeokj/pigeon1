@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { useStateContext } from '../contexts/ContextProvider';
-import { Dashboard, CooCoo } from '../components';
+import { Dashboard, CooCoo, Teaching } from '../components';
 import { DashB } from '../data/dummy';
 
 const Home = () => {

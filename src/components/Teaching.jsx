@@ -1,11 +1,15 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { FaChalkboardTeacher } from 'react-icons/fa'
+import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
+import { links } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
 
-const Timetable = () => {
+const Teaching = () => {
 
   const { currentColor, activeMenu, setActiveMenu, screenSize } = useStateContext();
-
+  
   return (
     <div>
       <div className="mt-5">
@@ -14,7 +18,7 @@ const Timetable = () => {
         bg-gradient-to-r from-purple-500 to-pink-500 to-fuchsia-500 bg-no-repeat bg-cover bg-center">
           <div className="flex justify-between items-center">
             <div>
-              <p className="font-bold text-3xl text-white">Timetable</p>
+              <p className="font-bold text-3xl text-white">Teaching</p>
             </div>
           </div>
         </div>
@@ -23,4 +27,4 @@ const Timetable = () => {
   )
 }
 
-export default Timetable
+export default Teaching
